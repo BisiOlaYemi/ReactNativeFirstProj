@@ -16,9 +16,13 @@ const Welcome = () => {
   const router = useRouter();
 
   return (
-    <View style={styles.container}>
+    <View>
+      <View style={styles.container}>
       <Text style={styles.userName}>Hello Yemi</Text>
+      <Text style={styles.welcomeMessage}>Search for nearby jobs</Text>
+      </View>
     </View>
+    
   )
 }
 
