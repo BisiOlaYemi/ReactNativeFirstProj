@@ -21,6 +21,30 @@ const Welcome = () => {
       <Text style={styles.userName}>Hello Yemi</Text>
       <Text style={styles.welcomeMessage}>Search for nearby jobs</Text>
       </View>
+      <View style={styles.searchContainer}>
+        <View style={styles.searchWrapper}>
+
+          <TextInput 
+            style={styles.searchInput}
+            value=''
+            onChange={() => {}}
+            placeholder='What are you looking for?'
+          />
+          <TouchableOpacity style={styles.searchBtn}>
+           <Image 
+            source={icons.search}
+            resizeMode='contain'
+            style={styles.searchBtnImage}
+           />
+          </TouchableOpacity>
+
+        </View>
+
+        <View style={styles.tabsContainer}>
+
+        </View>
+
+      </View>
     </View>
     
   )
