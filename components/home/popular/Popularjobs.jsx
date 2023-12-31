@@ -9,6 +9,8 @@ import PopularJobCard from '../../common/cards/popular/PopularJobCard'
 
 const Popularjobs = () => {
   const router = useRouter();
+  const isLoading = false;
+  
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -16,12 +18,15 @@ const Popularjobs = () => {
        style={styles.headerTitle}
       >
         Popular jobs
+
       </Text>
       <TouchableOpacity>
         <Text style={styles.headerBtn}>Show all</Text>
       </TouchableOpacity>
       </View>
-      <View></View>
+      <View style={styles.cardsContainer}>
+
+      </View>
     </View>
   )
 }
