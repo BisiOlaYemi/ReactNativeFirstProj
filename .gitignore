@@ -12,3 +12,7 @@ web-build/
 
 # macOS
 .DS_Store
+
+#Rapid
+*.rapidApiKey
+*.RAPID_API_KEY
