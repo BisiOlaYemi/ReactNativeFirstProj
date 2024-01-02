@@ -37,7 +37,7 @@ const Popularjobs = () => {
               data={[1, 2, 3, 4, 5, 6, 7, 8]}
               renderItem={({ item }) => (
                 <PopularJobCard 
-                  key={item?.job_id} // Ensure each item has a unique key
+                  key={item?.job_id} 
                   item={item}
                 />
               )}
