@@ -1,17 +1,21 @@
 import React from 'react'
 import { View, Text, TouchableOpacity, FlatList, ActivityIndicator } from 'react-native'
-import { useState } from 'react'
+// import { useState } from 'react'
 import { useRouter } from 'expo-router';
 import { COLORS, SIZES } from '../../../constants';
 import styles from './popularjobs.style'
-
 import PopularJobCard from '../../common/cards/popular/PopularJobCard'
+import useFetchData from '../../../hook/useFetchData';
 
 
 const Popularjobs = () => {
   const router = useRouter();
-  const isLoading = false;
-  const error = false;
+  
+  const { data, isLoading, error } = useFetchData
+    ('search', { 
+      query: 'React developer', 
+      num_pages: 1 
+  })
 
 
   return (
@@ -37,15 +41,13 @@ const Popularjobs = () => {
               data={[1, 2, 3, 4, 5, 6, 7, 8]}
               renderItem={({ item }) => (
                 <PopularJobCard 
-                  key={item?.job_id} 
-                  item={item}
+                   item={item}
                 />
               )}
-              keyExtractor={item => item?.job_id?.toString() || item?.id?.toString() || ''}
+              keyExtractor={item => item?.job_id}
               contentContainerStyle={{ columnGap: SIZES.medium}}
               horizontal
             />
-
           ) }
       </View>
     </View>
