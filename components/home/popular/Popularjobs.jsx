@@ -6,7 +6,7 @@ import { COLORS, SIZES } from '../../../constants';
 import styles from './popularjobs.style'
 
 import PopularJobCard from '../../common/cards/popular/PopularJobCard'
-import { Column } from 'typeorm';
+
 
 const Popularjobs = () => {
   const router = useRouter();
