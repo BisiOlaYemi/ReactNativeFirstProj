@@ -37,13 +37,15 @@ const Popularjobs = () => {
               data={[1, 2, 3, 4, 5, 6, 7, 8]}
               renderItem={({ item }) => (
                 <PopularJobCard 
-                   item={item}
+                  key={item?.job_id} // Ensure each item has a unique key
+                  item={item}
                 />
               )}
-              keyExtractor={item => item?.job_id}
+              keyExtractor={item => item?.job_id?.toString() || item?.id?.toString() || ''}
               contentContainerStyle={{ columnGap: SIZES.medium}}
               horizontal
             />
+
           ) }
       </View>
     </View>
